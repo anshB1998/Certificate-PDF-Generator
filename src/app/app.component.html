@@ -1,0 +1,25 @@
+<style>
+  #container {
+  position: relative;
+  text-align: center;
+  color: black;
+}
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+</style>
+
+<input type='file' (change)="readURL($event);" />
+<div id="container">
+  <img id="certificate" [src]="imageSrc || '#'" alt="your image" style="width: 50%;" />
+  <div class="centered">Ansh Bilimoria</div>
+</div>
+  <div id="content" #content>   
+      <div>  
+        <input type="button" value="CAPTURE" (click)="onExportClick()"/>  
+      </div>  
+  </div>
